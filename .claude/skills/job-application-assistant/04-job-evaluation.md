@@ -20,9 +20,9 @@ How well do the required/preferred skills align with the candidate's capabilitie
 | 40-59 | Partial match, significant upskilling needed |
 | 0-39 | Fundamental mismatch |
 
-**Strong match areas:** [YOUR_PRIMARY_SKILLS]
-**Moderate match areas:** [YOUR_SECONDARY_SKILLS]
-**Weak match areas:** [SKILLS_YOU_LACK]
+**Strong match areas:** Python (advanced), PyTorch/TensorFlow/Scikit-learn, MLOps (Docker, Kubernetes, Prometheus, Grafana), FastAPI/backend development, Computer Vision (CNNs, YOLO, object detection, OpenCV)
+**Moderate match areas:** Audio/speech processing (Whisper, Librosa, AWS Transcribe), Robotics (ROS2, LIDAR, SLAM), data engineering (Pandas, NumPy, PostgreSQL/MySQL)
+**Weak match areas:** Large-scale production ML experience (current work is academic/hackathon/internship scale), formal DevOps/SRE background, team-lead or people-management experience, peer-reviewed publications
 
 ### 2. Experience Match (0-100)
 Does work history align with what they're looking for?
@@ -34,9 +34,9 @@ Does work history align with what they're looking for?
 | 40-59 | Adjacent experience, would need to make the case |
 | 0-39 | Unrelated experience |
 
-**Strong:** [YOUR_DIRECT_EXPERIENCE_DOMAINS]
-**Moderate:** [YOUR_ADJACENT_EXPERIENCE]
-**Entry-level:** [ROLES_WITH_LIMITED_EXPERIENCE]
+**Strong:** ML Engineering, MLOps, Computer Vision - direct experience via research assistantship, internship, and multiple hackathon wins
+**Moderate:** Backend/software engineering (FastAPI-heavy projects), Audio/Speech ML roles, Robotics/autonomous systems roles
+**Entry-level:** Any role requiring 3+ years of professional (non-internship) experience - candidate is early-career and targeting Werkstudent-to-full-time pathways
 
 ### 3. Behavioral/Culture Fit (0-100)
 Does the role and company culture match the behavioral profile?
@@ -51,9 +51,11 @@ Does the role and company culture match the behavioral profile?
 **Red flags to research:** Department disorganization, work dominated by maintenance over development, poor chemistry with leadership, culture mismatches. Check reviews, media coverage, LinkedIn connections, and network contacts for insider perspective.
 
 ### 4. Location & Logistics (Pass/Fail + Notes)
-- Within commute range: PASS
-- Remote with occasional office: PASS
-- Requires relocation: FAIL (deal-breaker)
+- **Hard requirement (deal-breaker):** the posting's location must be Ilmenau (current base) or a highly populated, international German city. Explicitly confirmed: Hamburg, Berlin, Kiel, Nürnberg. By the same standard, other major metros also qualify: Munich, Frankfurt am Main, Cologne, Stuttgart, Düsseldorf, Leipzig, and similar. This is an open principle, not a closed list - judge a city's size/international character on its merits rather than requiring an exact name match.
+- Small towns, suburbs, or non-metro locations: **FAIL**, even for an otherwise strong-fit role. A direct commuter-belt suburb of a qualifying metro (e.g. "Neu-Isenburg bei Frankfurt," "Norderstedt" near Hamburg) can reasonably PASS if genuinely commutable from the metro; a small town with its own separate identity (e.g. Attendorn, Halver, Oberkochen, Wolfsburg) FAILs regardless of the employer's quality.
+- Remote within Germany: PASS
+- Cannot sponsor a work visa / no path to full-time conversion for a Werkstudent: FAIL (deal-breaker)
+- Outside Germany without confirmed sponsorship: FAIL
 - Frequent international travel: FLAG (discuss with user)
 
 ### 5. Career Alignment & Motivation (0-100)
@@ -67,19 +69,19 @@ Does this role advance career goals and contain tasks that energize?
 | 0-39 | Dead end or backwards step |
 
 **Career goals:**
-- [YOUR_CAREER_GOAL_1]
-- [YOUR_CAREER_GOAL_2]
-- [YOUR_CAREER_GOAL_3]
+- Land a Werkstudent role in ML Engineering, MLOps, Computer Vision, or AI Engineering with a clear, stated path to full-time conversion
+- Build production-scale ML/MLOps experience beyond academic, hackathon, and internship scale
+- Grow into a team that actively mentors and develops its people, eventually paying that forward to junior engineers
 
 **Motivation filter:** Evaluate not just whether you *can* do the tasks, but whether the tasks will *energize* you. Consider:
-- Tasks that energize: [YOUR_ENERGIZING_TASKS]
-- Tasks that drain: [YOUR_DRAINING_TASKS]
+- Tasks that energize: Open-ended technical problem-solving, building end-to-end ML/MLOps systems, rapid hands-on prototyping
+- Tasks that drain: Not yet established - update as more application/interview experience accumulates
 - Non-task factors: leadership style, department culture, company values, degree of autonomy
 
 **Life situation alignment:** Consider personal constraints:
-- **Security**: [YOUR_FINANCIAL_SITUATION_CONTEXT]
-- **Flexibility**: [YOUR_SCHEDULE_CONSTRAINTS]
-- **Professional development**: [YOUR_GROWTH_PRIORITIES]
+- **Security**: Currently a Master's student in Germany. Visa/work-permit sponsorship is a hard requirement for any offer - treat postings that cannot sponsor as an automatic FAIL on this dimension, not just a note.
+- **Flexibility**: Needs a role structured to fit around ongoing M.Sc. studies (i.e. genuine Werkstudent hours), with a credible path to full-time after graduation.
+- **Professional development**: Strongly prioritizes employers offering a documented Werkstudent -> full-time conversion pathway, since this supports the Permanent Residency process.
 
 ### 6. Salary Benchmark (Optional)
 
@@ -175,3 +177,14 @@ Before writing the application, consider whether the candidate should call the c
 - The call's purpose is **gathering information**, not delivering a pitch
 - Take notes - use what you learn to tailor the application
 - Reference the conversation naturally in the cover letter ("After speaking with [name], I was especially drawn to...")
+
+## Calibration from Past Applications
+
+*Auto-generated by `/setup` Path A from resolved `documents/applications/*/outcome.md`. Observational — rejections were boilerplate with no stated reason; treat as correlation, not confirmed cause.*
+
+**As of 2026-07-23 — 3 resolved, all rejected at the screening stage (0 interviews):** Siemens Werkstudent Data Science (rated Strong 79), amber AI Engineering Intern (Good 74), Jungheinrich Praktikum ML/CV (Good 69).
+
+- **High scores are not yet predicting screening success.** All three sat at Good–Strong yet none reached even a phone screen. Read current scores as *fit-on-paper*, and stay honest with the user that a strong score has not translated into callbacks so far.
+- **Shared factor across all three: a German-language gap.** Every posting was German-language and/or explicitly required German ("sehr gute Deutschkenntnisse", "gute Deutsch- und Englischkenntnisse"); each was answered with an English application disclosing A2/B1 German. Most plausible common screen-out factor, unconfirmed.
+- **Adjustment (interpretation, not a weight change):** When a posting states "**gute/sehr gute Deutschkenntnisse**" as a requirement (not "Deutsch von Vorteil", and distinct from an English-language posting), surface German-language fit as an explicit **screening risk** in the evaluation and flag it prominently in the recommendation — the current dimensions under-weight it. Prefer postings that are English-language or list German as "a plus" (e.g. the English-only Avelios / Allianz / Mitsubishi roles), and say so when triaging.
+- **Secondary, weaker signals (do not over-weight):** academic/hackathon/internship-scale experience against fields of qualified applicants; amber additionally carried unverified visa sponsorship and a full-time-internship (non-Werkstudent) structure.

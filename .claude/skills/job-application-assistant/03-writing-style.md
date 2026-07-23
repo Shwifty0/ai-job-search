@@ -105,6 +105,17 @@ The cover letter is **not a CV repetition**. It should be forward-looking:
 - Frame advanced degrees as evidence of independent project delivery
 
 ## Multi-language Applications
-- Default to the language of the job posting
-- Cover letters in the posting's language should feel natural, not translated
+
+### Language-selection rule (candidate standing preference, 2026-07-23)
+Decide the drafting language of **both the CV and the cover letter** from how the posting treats German:
+
+- **Strict German requirement** (posting states "gute/sehr gute Deutschkenntnisse", or the role/posting is clearly German-language and expects it): draft the CV **and** cover letter **in German**, written at a genuine **A2/B1 level** — short, simple sentences and basic constructions that honestly reflect the candidate's actual ability. Do **not** produce polished, native-level (C1/C2) German: that would misrepresent his proficiency and set a false expectation for any interview.
+  - **Always disclose the real level explicitly.** State plainly in the letter that German is at A2/B1 and improving (and that working English is C1). The A2/B1-level prose plus an explicit statement of level must agree — the application should never imply more fluency than the candidate has. Honesty about level is non-negotiable; this is a deliberate accuracy requirement, not a stylistic choice.
+- **Easy-going on language** (English-language posting, "German a plus", "Deutsch von Vorteil", or an explicitly English-speaking team): draft the CV and cover letter **in English**. Disclose German level only briefly if relevant.
+- **Ambiguous / unstated:** default to the posting's own language; if that is German with no stated proficiency bar, treat it as the strict case above and confirm with the user when unsure.
+
+This interacts with the triage guidance in `04-job-evaluation.md` (prefer English-friendly roles): triage still *prefers* language-easy roles, but when the candidate does apply to a German-required role, it is now submitted in honest A2/B1 German rather than in English.
+
+### General
+- Cover letters in the posting's language should feel natural, not translated (subject to the honest-level constraint above for German)
 - Slightly warmer, more personal tone may be acceptable in some languages
