@@ -1,0 +1,147 @@
+%----------------------------------------------------------------------------------------
+%    PACKAGES AND DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+\documentclass[10pt,a4paper]{article}
+
+% Essential packages
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{fontawesome5}
+% NOTE: hyperref is intentionally omitted. It injects a PDF /OpenAction and /URI
+% link actions that many career portals reject as "active contents" on upload.
+% Print the email as plain text (below) instead of \href - it stays ATS-readable.
+
+% Page layout - tighter margins
+\usepackage[top=0.7cm, bottom=0.7cm, left=1.2cm, right=1.2cm]{geometry}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\itemsep}{0pt}
+
+
+% Custom colors
+\definecolor{primarycolor}{RGB}{30, 55, 153}
+\definecolor{secondarycolor}{RGB}{85, 85, 85}
+
+% Custom commands - tighter spacing
+\newcommand{\sectiontitle}[1]{
+    \vspace{0.2cm}
+    \textcolor{primarycolor}{\large\textbf{#1}}
+    \par\noindent\textcolor{primarycolor}{\rule{\textwidth}{0.8pt}}
+    \vspace{0.05cm}
+}
+
+\newcommand{\daterange}[1]{{\textcolor{secondarycolor}{\textit{#1}}}}
+\newcommand{\jobtitle}[1]{{\textbf{#1}}}
+\newcommand{\organization}[1]{{\textit{#1}}}
+\newcommand{\entryseparator}{\vspace{0.1cm}}
+\newcommand{\contactitem}[2]{#1 \ #2 \hspace{0.25cm}}
+
+%----------------------------------------------------------------------------------------
+%    DOCUMENT
+%----------------------------------------------------------------------------------------
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%    HEADER
+%----------------------------------------------------------------------------------------
+\begin{center}
+    {\Large\textbf{[YOUR_NAME]}}
+
+    \vspace{0.05cm}
+
+    {\small [YOUR_LINKEDIN_HEADLINE]}
+
+    \vspace{0.1cm}
+
+    \small{\contactitem{\faMapMarker*}{[YOUR_ADDRESS]}
+    \contactitem{\faMobile*}{[YOUR_PHONE]}
+    \contactitem{\faEnvelope}{[YOUR_EMAIL]}}
+\end{center}
+
+%----------------------------------------------------------------------------------------
+%    PROFESSIONAL SUMMARY
+%----------------------------------------------------------------------------------------
+\sectiontitle{Professional Summary}
+\vspace{-0.05cm}
+[Write a 3-5 line professional summary tailored to the role you're applying for. Focus on what makes you uniquely qualified.]
+
+%----------------------------------------------------------------------------------------
+%    TECHNICAL SKILLS SECTION
+%----------------------------------------------------------------------------------------
+\sectiontitle{Technical Skills}
+\vspace{-0.05cm}
+\small
+\begin{tabular}{@{} l p{13.5cm} @{}}
+\textbf{[Skill Category 1]} & [Specific skills, frameworks, tools. Be concrete.] \\
+\textbf{[Skill Category 2]} & [Specific skills, frameworks, tools.] \\
+\textbf{[Skill Category 3]} & [Specific skills, frameworks, tools.] \\
+\textbf{[Skill Category 4]} & [Domain expertise, methods, approaches.] \\
+\textbf{[Skill Category 5]} & [Tools, platforms, software.] \\
+\textbf{[Skill Category 6]} & [Other relevant skills.] \\
+\end{tabular}
+\normalsize
+
+%----------------------------------------------------------------------------------------
+%    EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+\sectiontitle{Professional Experience}
+\vspace{-0.05cm}
+\jobtitle{[Job Title]} \hfill \daterange{[YYYY-MM -- Present]}\\
+\organization{[Company, City, Country]}
+\begin{itemize}[leftmargin=*,noitemsep,topsep=0.05cm,parsep=0pt]
+    \item [Achievement or responsibility 1 - be specific, use numbers where possible]
+    \item [Achievement or responsibility 2]
+\end{itemize}
+
+\jobtitle{[Job Title]} \hfill \daterange{[YYYY-MM -- YYYY-MM]}\\
+\organization{[Company, City, Country]}
+\begin{itemize}[leftmargin=*,noitemsep,topsep=0.05cm,parsep=0pt]
+    \item [Achievement or responsibility 1]
+    \item [Achievement or responsibility 2]
+\end{itemize}
+
+%----------------------------------------------------------------------------------------
+%    PROJECTS SECTION
+%----------------------------------------------------------------------------------------
+\sectiontitle{Key Projects \& Achievements}
+\vspace{-0.05cm}
+\jobtitle{[Project Name]} \hfill \daterange{[Context, e.g. Course / Event]}
+\begin{itemize}[leftmargin=*,noitemsep,topsep=0.05cm,parsep=0pt]
+    \item [Achievement or responsibility 1]
+    \item [Achievement or responsibility 2]
+\end{itemize}
+
+\entryseparator
+
+\jobtitle{[Project Name - include award/placement here if applicable, e.g. "- 1st Place"]} \hfill \daterange{[Date]}\\
+\organization{[Event/Organization, Location]}
+\begin{itemize}[leftmargin=*,noitemsep,topsep=0.05cm,parsep=0pt]
+    \item [Achievement or responsibility 1]
+    \item [Achievement or responsibility 2]
+\end{itemize}
+
+%----------------------------------------------------------------------------------------
+%    EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+\sectiontitle{Education}
+\vspace{-0.05cm}
+\jobtitle{[Degree] in [Field]} \hfill \daterange{[YYYY-MM -- Present]}\\
+\organization{[Institution, City, Country]} \ $\bullet$ \ Focus: [Key topics]
+
+\entryseparator
+
+\jobtitle{[Degree] in [Field]} \hfill \daterange{[YYYY-MM -- YYYY-MM]}\\
+\organization{[Institution, City, Country]}
+
+%----------------------------------------------------------------------------------------
+%    LANGUAGES AND CERTIFICATIONS SECTION
+%----------------------------------------------------------------------------------------
+\sectiontitle{Languages}
+\vspace{-0.05cm}
+\small
+\textbf{Languages:} [Language 1] (native) \ $\bullet$ \ [Language 2] (fluent) \ $\bullet$ \ [Language 3] (intermediate)
+\end{document}

@@ -4,6 +4,20 @@ framework_version: 1.0.1
 
 # CV Templates and Tailoring Guide
 
+<!-- BEGIN ACTIVE-TEMPLATE (managed by /add-template - do not edit by hand) -->
+> **Active template override: `original-cv-template`**
+>
+> A custom template is active. Where this block conflicts with the stock guidance below, this block wins. Structural advice below (tailoring, page-budget, cutting rules) still applies.
+>
+> - **Template skeleton:** `templates/cv/original-cv-template/template.tex` — use this as the structural reference instead of the stock moderncv template
+> - **Manifest:** `templates/cv/original-cv-template/TEMPLATE.md` — read this for style rules and known pitfalls before drafting
+> - **Compile with:** `pdflatex` (not `lualatex`, which the stock guidance below names). If `fontawesome5` ever errors under `pdflatex` on a different machine, fall back to `lualatex` — the source uses no `fontspec`-only features.
+> - **Fonts:** Latin Modern + FontAwesome5, both standard TeX Live packages — no bundled font files
+> - **Page limit:** exactly 1 page (hard limit, not 2 — this template has very little vertical slack; cut a bullet rather than let content wrap onto a 2nd page)
+> - **Fill requirement (hard, every time):** the 1 page must be at least ~95% full. A page that ends with a mostly-empty bottom third or more fails the compile-and-inspect check exactly like a 2nd-page overflow does — restore the highest-relevance previously-cut bullet/project/sentence rather than presenting a thin-looking page. Never pad with `\vspace`, larger fonts, or loosened geometry to fake a full page.
+> - **Output file:** unchanged (`cv/main_<company>_<role>.tex`); no separate class/font files to copy since everything is a standard TeX Live package
+<!-- END ACTIVE-TEMPLATE -->
+
 <!-- SETUP: Profile statements and section ordering are personalized by running /setup -->
 
 ## Template: LaTeX moderncv (Banking Style)
@@ -109,12 +123,14 @@ Write 5-7 lines that function as an "elevator pitch": a concise, compelling intr
 
 **Create 2-3 profile statement templates for your main role types:**
 
-<!-- SETUP: These are populated based on your background -->
-**For [YOUR_PRIMARY_ROLE_TYPE] roles:**
-> [YOUR_PROFILE_STATEMENT_TEMPLATE_1]
+**For ML Engineer roles:**
+> ML Engineering M.Sc. student at TU Ilmenau with hands-on experience building and deploying end-to-end AI systems - from Kubernetes-based autoscaling infrastructure for model serving to automated PII detection pipelines and ROS2-based autonomous navigation. 2x hackathon winner across computer vision, audio, and robotics domains. Currently a Research Assistant applying ML models and RESTful APIs to forest inventory analysis at TU Ilmenau. Bringing strong MLOps fundamentals (Docker, Kubernetes, Prometheus, Grafana) and a fast, hands-on learning style to production ML teams.
 
-**For [YOUR_SECONDARY_ROLE_TYPE] roles:**
-> [YOUR_PROFILE_STATEMENT_TEMPLATE_2]
+**For MLOps Engineer roles:**
+> MLOps-focused ML Engineering student with direct experience designing Kubernetes-based autoscaling infrastructure, containerized FastAPI inference services, and Prometheus/Grafana monitoring for production-style ML serving. Combines backend engineering (FastAPI, PostgreSQL, microservices) with applied ML (PyTorch, TensorFlow) to build reliable, observable ML systems end to end. Research Assistant at TU Ilmenau building data pipelines for ML/DL models.
+
+**For Computer Vision Engineer roles:**
+> Computer Vision-focused ML Engineer with hands-on experience in CNNs, YOLO-based object detection, and sensor fusion for autonomous navigation (LIDAR + IMU), including a 1st-place hackathon win building a real-time autonomous LIDAR vehicle. M.Sc. Research student in Computer & Systems Engineering at TU Ilmenau with a strong MLOps foundation for deploying vision models to production.
 
 ### Core Competencies / Skills Section (Best Practice)
 Reorder and emphasize based on the role. Use bold category labels.
@@ -154,10 +170,11 @@ If there is a gap in your employment history:
 
 After writing the CV and before presenting to the user, always compile and visually inspect the PDF. Iterate until the layout is clean. Workflow:
 
-1. Run `lualatex -interaction=nonstopmode main_<company>_<role>.tex`
-2. Check the output page count: must be exactly 2
-3. Read the PDF via the Read tool and visually inspect both pages
-4. Check for **orphaned entries**: a `\cventry` title line must never sit alone at the bottom of page 1 with its bullets on page 2
+1. Run the active template's compile command (`lualatex` for stock moderncv, `pdflatex` for `original-cv-template` — see the ACTIVE-TEMPLATE block above)
+2. Check the output page count: must match the active template's page limit exactly (2 for stock, 1 for `original-cv-template`)
+3. Read the PDF via the Read tool and visually inspect every page
+4. Check for **orphaned entries**: an entry title line must never sit alone at the bottom of a page with its bullets on the next page
+5. **Check the fill level of the last page — hard requirement, every time.** The last page must be at least ~95% full. A page ending with a mostly-empty bottom third or more fails this check exactly like an overflow does — see "Problem: last page finishes early" below.
 
 ### Fixing common page-break problems
 
@@ -175,8 +192,8 @@ Add `\enlargethispage{2-3\baselineskip}` before a late section (e.g., before `\s
 **Problem: 3 pages with significant content on page 3**
 Cut content — do not compress geometry or `\vspace`. See "Relevance-weighted cutting" below for the rule.
 
-**Problem: content finishes early on page 2 (feels thin)**
-Restore the highest-relevance item that was previously cut — a CV that ends mid-page 2 looks incomplete.
+**Problem: last page finishes early / feels thin (below ~95% fill) — hard requirement, every time**
+Restore the highest-relevance item that was previously cut — an extra bullet, a second project, a trimmed sentence — until the page is at least ~95% full. A CV that ends with substantial trailing whitespace looks incomplete regardless of which template is active. Never fake fullness by increasing `\vspace`, font size, or loosening geometry — restore real content instead. If there is genuinely no more truthful content to add, that is a signal the profile itself needs more material (via `/expand` or `/setup`), not a reason to leave the page under-filled.
 
 ## ATS Parseability
 

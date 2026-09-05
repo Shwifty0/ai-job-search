@@ -11,6 +11,12 @@
 % Package Imports
 \usepackage[hmargin=2.3cm, vmargin=2.3cm]{geometry}
 \usepackage[hidelinks]{hyperref}
+% Produce upload-safe PDFs: career portals that reject files with "active
+% contents" flag PDF /URI link actions and the hyperref /OpenAction. Disable
+% the OpenAction and make \href print plain text (no link annotation). Email
+% and URLs still render as literal, ATS-readable text.
+\hypersetup{pdfstartview={},pdfpagemode=UseNone}
+\renewcommand{\href}[2]{#2}
 \usepackage[usenames,dvipsnames]{xcolor}
 \usepackage{titlesec}
 \usepackage[absolute]{textpos}

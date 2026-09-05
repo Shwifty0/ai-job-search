@@ -66,10 +66,10 @@ Also read the most recent existing CV and cover letter files for concrete struct
 
 ### CV (`cv/main_<company>_<role>.tex`)
 - Always in **English**
-- Follow the moderncv/banking format from `05-cv-templates.md`
+- Follow the active CV template from `05-cv-templates.md` (its ACTIVE-TEMPLATE block if one is set — currently `original-cv-template` — otherwise the stock moderncv/banking format)
 - Tailor the profile statement and experience bullets to the specific role
 - Reframe skills and achievements to match job requirements
-- Keep to 2 pages
+- Keep to the active template's page limit exactly (currently **1 page** for `original-cv-template`; 2 pages for stock moderncv), and **fill at least ~95% of the last page — hard requirement, every time.** Under-filling is treated as seriously as overflowing.
 
 ### Cover Letter (`cover_letters/cover_<company>_<role>.tex`)
 - **Match the language of the job posting** (Danish posting -> Danish cover letter, English posting -> English cover letter)
@@ -200,9 +200,10 @@ If either compile fails, fix the error and re-compile until clean.
 Read both PDFs via the Read tool and verify:
 
 **CV (`cv/main_<company>_<role>.pdf`):**
-- [ ] Exactly 2 pages (not 1, not 3)
-- [ ] No orphaned `\cventry` titles — a job/education title line must never sit alone at the bottom of page 1 with its bullets on page 2. This is the most common failure.
-- [ ] Section headings are not isolated at the top of page 2 with only 1-2 lines below
+- [ ] Page count matches the active template's limit exactly (see `05-cv-templates.md` ACTIVE-TEMPLATE block — currently **1 page** for `original-cv-template`; 2 pages for stock moderncv if no override is set)
+- [ ] **Last page is at least ~95% full — hard requirement, every time.** A page ending with a mostly-empty bottom third or more fails this check exactly like an overflow does. Restore the highest-relevance previously-cut bullet/project/sentence rather than presenting a thin page; never pad with `\vspace`, font size, or geometry changes.
+- [ ] No orphaned entry titles — a job/education title line must never sit alone at the bottom of a page with its bullets spilling to the next page. This is the most common overflow failure.
+- [ ] Section headings are not isolated at the top of a page with only 1-2 lines below
 - [ ] No awkward whitespace gaps
 
 **Cover letter (`cover_letters/cover_<company>_<role>.pdf`):**
@@ -217,6 +218,7 @@ If the layout has problems, edit the `.tex` files and recompile. Common fixes (s
 - **Orphaned CV entry title:** `\usepackage{needspace}` in preamble, then `\needspace{5\baselineskip}` immediately before the problematic `\cventry`
 - **CV spills to page 3 with only a trailing section:** `\enlargethispage{2-3\baselineskip}` before a late section
 - **Substantial content on page 3:** cut content using **relevance-weighted cutting** (see `05-cv-templates.md` → "Relevance-weighted cutting"). Score each candidate line by (a) relevance to THIS posting's keywords and responsibilities, (b) uniqueness (is it duplicated elsewhere?), (c) narrative load (does the cover letter depend on it?). Cut the lowest-total-score line first, regardless of section. Do NOT mechanically apply a static section-based priority order — an older-role bullet that hits posting keywords is worth more than a recent-role bullet that does not.
+- **Last page under ~95% full:** restore the highest-relevance previously-cut item (an extra bullet, a second project, a trimmed sentence) until the page is genuinely full. This is a hard requirement, not a nice-to-have — treat it with the same priority as an overflow.
 - **Cover letter itemize breaks compile or uses wrong font:** close `\lettercontent{}` before the list, wrap the list in `{\raggedright\fontspec[Path = OpenFonts/fonts/raleway/]{Raleway-Medium}\fontsize{11pt}{13pt}\selectfont \begin{itemize}...\end{itemize}\par}`
 - **Cover letter spills to 2 pages:** trim using the same relevance-weighted logic. First cut: sentences that restate what a bullet already said. Second cut: a bullet that does not hit posting keywords. Last resort: a bullet that does hit posting keywords. Never reduce geometry or line spacing.
 
