@@ -1,10 +1,7 @@
-# Job Application Assistant for [YOUR_NAME]
-
-<!-- SETUP: This file is populated by running /setup -->
-<!-- After running /setup, all [PLACEHOLDER] tokens will be replaced with your actual information -->
+# Job Application Assistant for Muhammad Ozair
 
 ## Role
-This repo is a job application workspace. Claude acts as a career advisor and application assistant for [YOUR_NAME], helping with:
+This repo is a job application workspace. Claude acts as a career advisor and application assistant for Muhammad Ozair, helping with:
 1. **Job fit evaluation** - Assess job postings against your profile (skills, experience, behavioral traits)
 2. **CV tailoring** - Adapt existing CV templates (LaTeX/moderncv) to target specific roles
 3. **Cover letter writing** - Draft targeted cover letters using existing templates (LaTeX)
@@ -13,68 +10,62 @@ This repo is a job application workspace. Claude acts as a career advisor and ap
 
 ## Candidate Profile
 
-<!-- This section is auto-populated by /setup. You can also fill it in manually. -->
-
 ### Identity
-- **Name:** [YOUR_NAME]
-- **Location:** [YOUR_CITY], [YOUR_COUNTRY] ([YOUR_COMMUTE_CONSTRAINTS])
-- **Languages:** [YOUR_LANGUAGES]
-- **Status:** [YOUR_EMPLOYMENT_STATUS]
-- **LinkedIn headline:** "[YOUR_LINKEDIN_HEADLINE]"
+- **Name:** Muhammad Ozair
+- **Location:** Ilmenau, Germany. **Hard requirement:** open to relocating only to highly populated, international German cities - explicitly Hamburg, Berlin, Kiel, Nürnberg, and Leipzig, plus by the same standard other major metros (Munich, Frankfurt am Main, Cologne, Stuttgart, Düsseldorf, and similar). Small towns and non-metro locations are out of scope even for otherwise strong-fit roles.
+- **Languages:** English (C1), German (B1), Urdu (Native)
+- **Status:** M.Sc. Research student in Computer & Systems Engineering at TU Ilmenau; all coursework complete, only the thesis remains, meaning significantly more schedule flexibility than a typical mid-coursework student and genuine openness to writing the thesis in cooperation with an employer. Currently Research Assistant at TU Ilmenau; seeking a Werkstudent role with a path to full-time conversion
+- **LinkedIn headline:** "ML Engineer | MLOps | Computer Vision & AI Systems"
 
 ### Education
-<!-- List your degrees, most recent first -->
-- **[DEGREE_LEVEL] in [FIELD]** ([YEAR_START]-[YEAR_END]) - [INSTITUTION]
-  - Thesis: "[THESIS_TITLE]"
-  - Topics: [KEY_TOPICS]
+- **M.Sc. Research in Computer & Systems Engineering** (2024-Present) - TU Ilmenau, Germany
+  - Focus: ML Systems, Cloud Computing, AI Research
+- **B.Eng. Computer Engineering** (2018-2023) - Bahria University, Karachi, Pakistan
 
 ### Professional Experience
-<!-- List your roles, most recent first -->
-- **[JOB_TITLE]** ([START_DATE] - [END_DATE]) - **[COMPANY]** ([LOCATION])
-  - [KEY_RESPONSIBILITY_1]
-  - [KEY_RESPONSIBILITY_2]
-  - [KEY_ACHIEVEMENT]
+- **Research Assistant** (Aug 2024 - Present) - **TU Ilmenau** (Ilmenau, Germany)
+  - AI research for forest inventory analysis and data collection via RESTful APIs
+  - Implement data preprocessing pipelines for ML/DL models
+  - Processed geospatial raster data using rasterio and related libraries into model-ready datasets for forest inventory analysis
+- **ML Intern** (Oct 2023 - Dec 2023) - **Softech** (Karachi, Pakistan)
+  - Built automated PII detection system using Microsoft Presidio for audio transcriptions (15+ data types, 85%+ confidence)
+  - Developed speech-to-text pipeline with AWS Transcribe and OpenAI Whisper with a Streamlit interface
 
 ### Technical Skills
-- **Primary:** [YOUR_PRIMARY_SKILLS]
-- **Secondary:** [YOUR_SECONDARY_SKILLS]
-- **Domain:** [YOUR_DOMAIN_EXPERTISE]
-- **Software:** [YOUR_TOOLS_AND_SOFTWARE]
+- **Primary:** Python (Advanced), PyTorch, TensorFlow, Scikit-learn, OpenCV, Docker, Kubernetes, FastAPI, CNNs, YOLO, Object Detection
+- **Secondary:** Flask, REST APIs, Microservices, PostgreSQL, MySQL, SQLAlchemy, Pandas, NumPy, Prometheus, Grafana
+- **Domain:** Computer Vision, MLOps/Cloud-native ML deployment, Audio & Speech Processing (Whisper, Librosa), Robotics & Autonomous Systems (ROS2, LIDAR, SLAM)
+- **Software:** Docker, Kubernetes, Minikube, Prometheus, Grafana, Git, GitLab, Streamlit
 
 ### Certifications
-<!-- List relevant certifications with dates -->
-- **[CERTIFICATION_NAME]** - [HOURS]h - completed [DATE]
+None on file yet.
 
 ### Publications
-<!-- List peer-reviewed publications, if any -->
-- [AUTHOR_LIST] ([YEAR]). [TITLE]. [JOURNAL].
+None yet.
 
 ### Awards
-<!-- List relevant awards, hackathons, competitions -->
-- [AWARD_NAME] - [EVENT] ([YEAR])
+- 1st Place, Autonomous LIDAR Vehicle - Hard & Soft Hackathon, Romania (2025)
+- 1st Place, Audio Beat Detection App - Kickelhack Hackathon, Fraunhofer IDMT, Germany (2024)
 
 ### Behavioral Profile
-<!-- Your behavioral assessment results (PI, DISC, Myers-Briggs, or self-assessment) -->
-- **[TRAIT_1]** - [DESCRIPTION]
-- **[TRAIT_2]** - [DESCRIPTION]
-- **Strengths:** [YOUR_STRENGTHS]
-- **Growth areas:** [YOUR_GROWTH_AREAS]
-- **Thrives in:** [YOUR_IDEAL_ENVIRONMENT]
+- **Problem-solving orientation** - Primary source of motivation; drawn to open-ended technical challenges over routine tasks
+- **Team/mentorship orientation** - Explicitly seeks teams that nurture and mentor people rather than purely output-driven cultures
+- **Strengths:** Fast, independent execution of end-to-end systems (ROS2 navigation, Kubernetes autoscaling, real-time transcription), breadth across CV/audio/robotics/MLOps
+- **Growth areas:** Experience is currently academic/hackathon/internship scale rather than large-scale production
+- **Thrives in:** Inclusive teams that actively nurture and mentor people, working on genuinely open-ended problems
 
 ### What Excites You
-<!-- What motivates you professionally -->
-- [PASSION_1]
-- [PASSION_2]
+- Solving problems - genuinely open-ended technical challenges
+- Building end-to-end ML/MLOps systems, from data pipeline to deployment
 
 ### Target Sectors
-<!-- Industries and companies you're targeting -->
-- [SECTOR_1]: [EXAMPLE_COMPANIES]
-- [SECTOR_2]: [EXAMPLE_COMPANIES]
+- AI/ML Engineering and MLOps/Cloud Infrastructure (specific target companies not yet identified - refine via `/scrape` and company research)
+- Computer Vision-driven products (robotics, manufacturing, accessibility)
 
 ### Deal-breakers
-<!-- Hard constraints on job search -->
-- [DEALBREAKER_1]
-- [DEALBREAKER_2]
+- Roles that cannot sponsor a work visa / provide no path to long-term residency in Germany
+- Werkstudent roles with no credible path to full-time conversion
+- Roles located outside highly populated, international German cities (small towns / non-metro locations are a hard fail, regardless of role quality)
 
 ## Repo Structure
 - `cv/` - LaTeX CV variants (moderncv template, banking style)
@@ -107,7 +98,7 @@ After creating or updating a CV or cover letter, re-read the generated file and 
 - [ ] Nice-to-have requirements are highlighted where there is a match
 
 ### Consistency
-- [ ] CV follows the standard 2-page moderncv/banking format
+- [ ] CV follows the active CV template's format and page limit (see `05-cv-templates.md` ACTIVE-TEMPLATE block - currently `original-cv-template`, 1 page hard limit, compiled with pdflatex; falls back to the stock 2-page moderncv/banking format only if no active template override is set)
 - [ ] Cover letter uses cover.cls template and established structure
 - [ ] Tone is consistent across CV and cover letter
 - [ ] No contradictions between CV and cover letter content
@@ -121,9 +112,10 @@ After creating or updating a CV or cover letter, re-read the generated file and 
 
 ### Compiled PDF verification (MANDATORY - never skip)
 Both documents MUST be compiled and visually inspected via the Read tool on the PDF output. "Looks fine in the .tex" is not acceptable - LaTeX page-break decisions are unpredictable. Iterate until these all pass:
-- [ ] CV compiled with **lualatex** (pdflatex often fails on modern MiKTeX with fontawesome5 font-expansion errors). Cover letter compiled with **xelatex** (cover.cls requires fontspec).
-- [ ] **CV is exactly 2 pages** - not 1, not 3
-- [ ] **No orphaned `\cventry` titles** - a job/education title must never sit at the bottom of a page with its bullets spilling to the next page. Use `\needspace{5\baselineskip}` before each `\cventry` to prevent this, and `\enlargethispage{2-3\baselineskip}` to rescue a trailing section that just barely spills
+- [ ] CV compiled with the engine the active template specifies (currently **pdflatex** for `original-cv-template`; the stock moderncv template uses **lualatex**, since pdflatex often fails on modern MiKTeX with fontawesome5 font-expansion errors). Cover letter compiled with **xelatex** (cover.cls requires fontspec).
+- [ ] **CV matches the active template's page limit exactly** - currently **exactly 1 page** for `original-cv-template` (not 2, not a spillover 2nd page); the stock moderncv template's limit is 2 pages if no override is active
+- [ ] **CV fills at least ~95% of its last page - hard requirement, every time.** A page that ends with substantial trailing whitespace (a mostly-empty bottom third or more) fails this check exactly like an overflow does. Fix by restoring the highest-relevance previously-cut item (an extra bullet, a second project, a trimmed sentence) - never by stretching `\vspace`, font size, or geometry to pad the page. This is symmetric with the overflow rule: too little content is treated as seriously as too much.
+- [ ] **No orphaned `\cventry`/entry titles** - a job/education title must never sit at the bottom of a page with its bullets spilling to the next page. Use `\needspace{5\baselineskip}` (or the active template's equivalent) before each entry to prevent this, and `\enlargethispage{2-3\baselineskip}` to rescue a trailing section that just barely spills
 - [ ] **Cover letter is exactly 1 page** - signature block must fit with the body, never overflow
 - [ ] **Cover letter bullet font matches body font** - `\lettercontent{}` must not wrap `\begin{itemize}...\end{itemize}` (the command's trailing `\\` errors on `\end{itemize}`, and moving itemize outside loses the Raleway font). Standard pattern: close `\lettercontent{}`, then wrap the list in `{\raggedright\fontspec[Path = OpenFonts/fonts/raleway/]{Raleway-Medium}\fontsize{11pt}{13pt}\selectfont \begin{itemize}...\end{itemize}\par}`
 

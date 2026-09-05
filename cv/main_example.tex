@@ -1,8 +1,7 @@
-%% Example CV - [YOUR_NAME]
+%% Example CV - Muhammad Ozair
 %% Comprehensive overview of all competencies, experience, and achievements.
 %% Use as a master reference when tailoring role-specific CVs.
 %%
-%% SETUP: Run /setup to populate this with your actual information.
 %% Compile with: lualatex main_example.tex
 %% (pdflatex often fails on modern MiKTeX with fontawesome5 font-expansion errors.)
 
@@ -24,18 +23,19 @@
     linkcolor=blue,
     filecolor=magenta,
     urlcolor=blue,
-    pdftitle={[YOUR_NAME] - CV},
+    pdftitle={Muhammad Ozair - CV},
     pdfpagemode=FullScreen,
 }
 \usepackage[scale=0.80]{geometry}
 \usepackage{import}
 
 % personal data
-\name{[First]}{[Last]}
-\address{[Your Address, City, Country]}{}{}
-\phone[mobile]{[+XX XXXXXXXXXX]}
-\email{[your.email@example.com]}
-\extrainfo{\href{[https://linkedin.com/in/your-profile]}{LinkedIn}, \href{[https://github.com/your-username]}{GitHub}}
+\name{Muhammad}{Ozair}
+\address{Ilmenau, Germany}{}{}
+\phone[mobile]{+49 151 47487647}
+\email{ozairmohammad12@gmail.com}
+% TODO: add LinkedIn/GitHub URLs once available, e.g.:
+% \extrainfo{\href{https://linkedin.com/in/your-profile}{LinkedIn}, \href{https://github.com/your-username}{GitHub}}
 
 \begin{document}
 
@@ -46,7 +46,7 @@
 % ============================================================
 
 \vspace{6pt}
-\small{[Write a 3-5 line profile statement tailored to the role you're applying for. Focus on what makes you uniquely qualified. Example: "Data scientist with a PhD in [field] and X years of industry experience. Combines deep domain expertise in [domain] with strong applied machine learning and Python development skills. Experienced in developing end-to-end ML pipelines, from data ingestion to stakeholder-facing dashboards."]}
+\small{ML Engineering M.Sc. student at TU Ilmenau with hands-on experience building and deploying end-to-end AI systems -- from Kubernetes-based autoscaling infrastructure for model serving to automated PII detection pipelines and ROS2-based autonomous navigation. 2x hackathon winner across computer vision, audio, and robotics domains. Currently a Research Assistant applying ML models and RESTful APIs to forest inventory analysis at TU Ilmenau. Bringing strong MLOps fundamentals (Docker, Kubernetes, Prometheus, Grafana) and a fast, hands-on learning style to production ML teams.}
 
 % ============================================================
 %     CORE COMPETENCIES
@@ -56,15 +56,15 @@
 \vspace{1pt}
 \begin{itemize}
 
-\item \textbf{[Skill Category 1]}: [Specific skills, frameworks, tools. Be concrete.]
+\item \textbf{Machine Learning \& Computer Vision}: PyTorch, TensorFlow, Scikit-learn, CNNs, YOLO, object detection
 
-\item \textbf{[Skill Category 2]}: [Specific skills, frameworks, tools.]
+\item \textbf{MLOps \& Cloud Infrastructure}: Docker, Kubernetes, custom autoscaling, Prometheus, Grafana, model serving
 
-\item \textbf{[Skill Category 3]}: [Specific skills, frameworks, tools.]
+\item \textbf{Backend \& API Development}: FastAPI, Flask, REST APIs, microservices, PostgreSQL, MySQL, SQLAlchemy
 
-\item \textbf{[Skill Category 4]}: [Domain expertise, methods, approaches.]
+\item \textbf{Audio \& Speech Processing}: OpenAI Whisper, Librosa, AWS Transcribe, real-time transcription pipelines
 
-\item \textbf{[Skill Category 5]}: [Tools, platforms, software.]
+\item \textbf{Robotics \& Autonomous Systems}: ROS2, LIDAR, sensor fusion, SLAM, autonomous navigation
 
 \end{itemize}
 
@@ -77,31 +77,20 @@
 \begin{itemize}
 
 % --- Most Recent Role ---
-\item{\cventry{[YYYY--Present]}{[Job Title]}{[Company]}{[City, Country]}{}{\vspace{1pt}
+\item{\cventry{2024--Present}{Research Assistant}{TU Ilmenau}{Ilmenau, Germany}{}{\vspace{1pt}
 \begin{itemize}
-    \item [Achievement or responsibility 1 - be specific, use numbers where possible]
-    \item [Achievement or responsibility 2]
-    \item [Achievement or responsibility 3]
-    \item [Achievement or responsibility 4]
+    \item AI research for forest inventory analysis and data collection via RESTful APIs
+    \item Implement data preprocessing pipelines for ML/DL models
+    \item Processed geospatial raster data using rasterio and related libraries into model-ready datasets for forest inventory analysis
 \end{itemize}}}
 
 \vspace{3pt}
 
 % --- Previous Role ---
-\item{\cventry{[YYYY--YYYY]}{[Job Title]}{[Company]}{[City, Country]}{}{\vspace{1pt}
+\item{\cventry{2023}{ML Intern}{Softech}{Karachi, Pakistan}{}{\vspace{1pt}
 \begin{itemize}
-    \item [Achievement or responsibility 1]
-    \item [Achievement or responsibility 2]
-    \item [Achievement or responsibility 3]
-\end{itemize}}}
-
-\vspace{3pt}
-
-% --- Earlier Role ---
-\item{\cventry{[YYYY--YYYY]}{[Job Title]}{[Company]}{[City, Country]}{}{\vspace{1pt}
-\begin{itemize}
-    \item [Achievement or responsibility 1]
-    \item [Achievement or responsibility 2]
+    \item Built automated PII detection system using Microsoft Presidio for audio transcriptions (15+ data types, 85\%+ confidence)
+    \item Developed speech-to-text pipeline with AWS Transcribe and OpenAI Whisper with a Streamlit interface
 \end{itemize}}}
 
 \end{itemize}
@@ -114,15 +103,13 @@
 \vspace{1pt}
 \begin{itemize}
 
-\item{\cventry{[YYYY--YYYY]}{[Degree] in [Field]}{[Institution]}{[City, Country]}{}{\vspace{1pt}
-Thesis: ``[Thesis Title].'' [Brief description of research focus.]
+\item{\cventry{2024--Present}{M.Sc. Research in Computer \& Systems Engineering}{TU Ilmenau}{Germany}{}{\vspace{1pt}
+Focus: ML Systems, Cloud Computing, AI Research.
 }}
 
 \vspace{3pt}
 
-\item{\cventry{[YYYY--YYYY]}{[Degree] in [Field]}{[Institution]}{[City, Country]}{}{\vspace{1pt}
-[Brief description or key topics.]
-}}
+\item{\cventry{2018--2023}{B.Eng. Computer Engineering}{Bahria University}{Karachi, Pakistan}{}{}}
 
 \end{itemize}
 
@@ -133,27 +120,18 @@ Thesis: ``[Thesis Title].'' [Brief description of research focus.]
 \section{Languages}
 \vspace{1pt}
 \begin{itemize}
-\item [Language 1] (native), [Language 2] (fluent), [Language 3] (intermediate).
+\item Urdu (native), English (C1), German (A2/B1).
 \end{itemize}
 
 % ============================================================
-%     PUBLICATIONS (optional)
-% ============================================================
-
-\section{Publications}
-\vspace{1pt}
-\begin{itemize}
-\item [Author(s)] ([Year]). [Title]. [Journal/Conference]. \href{[DOI_URL]}{DOI link}
-\end{itemize}
-
-% ============================================================
-%     HONORS AND AWARDS (optional)
+%     HONORS AND AWARDS
 % ============================================================
 
 \section{Honors and Awards}
 \vspace{1pt}
 \begin{itemize}
-\item{\textbf{[Award Name]} -- [Event/Organization] ([Year]).}
+\item{\textbf{1st Place, Autonomous LIDAR Vehicle} -- Hard \& Soft Hackathon, Romania (2025).}
+\item{\textbf{1st Place, Audio Beat Detection App} -- Kickelhack Hackathon, Fraunhofer IDMT, Germany (2024).}
 \end{itemize}
 
 % ============================================================
